@@ -1,0 +1,20 @@
+<body>
+    {{> MainContainer }}
+</body>
+
+<template name="MainContainer">
+    <div class="container">
+        <h1>Крестики нолики</h1>
+        <button class="btn">Играть</button>
+        <div class="text">Ходит игрок X</div>
+        <div class="table">
+            {{#each oneCell in allCells}}
+                {{> CellElement }}
+            {{/each}}
+        </div>
+    </div>
+</template>
+
+<template name="CellElement">
+    <div class="table-item"></div>
+</template>
