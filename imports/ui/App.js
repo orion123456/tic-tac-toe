@@ -22,5 +22,14 @@ Template.MainContainer.onCreated(function () {
 Template.MainContainer.helpers({
     allCells() {
         return Template.instance().table.get();
+    },
+    addValue() {
+
+    }
+});
+
+Template.CellElement.events({
+    'click .table-item'(event, template) {
+        console.log(template.data.cell.id)
     }
 });
